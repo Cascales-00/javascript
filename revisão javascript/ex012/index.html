@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>ex012 - Números com JS</title>
+</head>
+<body>
+    <h1>É par ou é impar?</h1>
+    <button onclick="parOuImpar()">Clique para iniciar</button>
+    <section id="res">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+
+    <script>
+        function parOuImpar(){
+            let n = window.prompt('Digitte um número:')
+            let res = document.querySelector('section#res')
+            if (n % 2 == 0){
+                res.innerHTML=(`<p>O número ${n} que foi digitado é <strong>PAR!</strong></p>`)
+            } else {
+                res.innerHTML = (`<p>O número ${n} que foi digitado é <strong>IMPAR!</strong></p>`)
+            }
+        }
+    </script>
+</body>
+</html>

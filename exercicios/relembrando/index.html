@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    <h2>Em que país você vive?</h2>
+    <input type="text" id="txt">
+    <input type="button" value="verificar" onclick="verifica()">
+    <section id="res">
+        <p></p>
+    </section>
+
+    <script>
+        function verifica(){
+            let txtpais = document.querySelector('input#txt').value
+            let res = document.querySelector('section#res')
+            if (txtpais == 'Brazil' || txtpais == 'Brasil'){
+                res.innerHTML =(`<p>Você mora em ${txtpais} e é <strong>Brasileiro</strong></p>`)
+            } else if (txtpais == 'brazil' || txtpais == 'brasil') {
+                res.innerHTML =(`<p>Você mora em ${txtpais} e é <strong>Brasileiro</strong></p>`)
+            } else {
+                res.innerHTML =(`<p>Você mora em ${txtpais} e é <strong>Estrangeiro</strong></p>`)
+            }
+        }
+    </script>
+    
+</body>
+</html>

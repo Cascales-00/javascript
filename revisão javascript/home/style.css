@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'paradise';
+    src: url('../home/fonts/Paradise.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'kgred';
+    src: url('../home/fonts/KGRedHands.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cor1:#A13D63;
+    --cor2:#CEABB1;
+    --cor3:#E0DEF7;
+    --cor4:#D6D6D6;
+}
+body {
+    background-color: var(--cor4);
+    margin: 0px;
+
+}
+
+header {
+    background-color: var(--cor2);
+    padding: 10px;
+    /*background-image: linear-gradient(to bottom, var(--cor2) 80%, var(--cor1) 90%);*/   
+}
+
+header h1 {
+    margin-top: 30px;
+    color: black;
+    font-family: 'paradise', Times, sans-serif;
+    font-size: 4em;
+}
+
+
+nav {
+    background-image: linear-gradient(to bottom, var(--cor2) , var(--cor1));
+    width: 100%;
+    background-color: var(--cor1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 10px 9px 0px rgba(0, 0, 0, 0.514)
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    
+    font-family: 'paradise', Times, sans-serif;  
+}
+
+nav a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    border-radius: 60%;
+    background-color: var(--cor3);
+    transition: 0.5s;
+    
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 0px;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+    margin-left: 20px;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+section {
+    max-width: 500px;
+    background-image: linear-gradient(45deg, var(--cor3), var(--cor4), var(--cor2));
+    border-radius: 5px;
+    box-shadow: 6px 6px 9px 3px rgba(0, 0, 0, 0.51);
+    padding: 10px;
+    margin: auto;   
+    margin-top: 50px; 
+}
+
+section p {
+    text-align: center;
+    
+}
+
+button {
+    border-radius: 20px;
+    border-style: hidden;
+}
+
+button:hover{
+    
+    font-weight: bold;
+    transition: 4s;
+    background-image: linear-gradient(to right, var(--cor3), var(--cor2));
+    transition: 0.5s;
+}
+section h2 {
+    text-align: center;
+    font-family: 'kgred', 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+section button {
+    width: 70px;
+    padding: 5px;
+    margin-left: 3px;
+}
+section a {
+    text-decoration: none;
+    color: black;
+}
+    
+
+footer p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.rodape {
+    background-color: var(--cor2);
+    bottom: 0px;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+}
+
+
+
+
+

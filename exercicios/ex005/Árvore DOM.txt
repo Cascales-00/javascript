@@ -1,0 +1,36 @@
+DOM  = Document Object Model
+
+a arvore DOM começa da raiz (window)
+
+tudo dentro JS está dentro de um objeto chamado 'window'
+
+dentro do window temos varios outros objetos
+
+//Essa é a árvore DOM de nosso arquivo
+(window) temois 'Location', 'Document', 'History'
+dentro de Document temos:
+(html) e dentro de html temos head e body
+dentro de head ->meta, title
+dentro de body -> h1, p, p, div
+dentro de p temos strong
+
+
+os objetos que estão acima são chamados de parants e os que estão abaixo são child
+
+
+SELECIONANDO    
+
+obs: Quando tiver mais de um obejo usar [] para indicar a posição
+por Marca   (getElementByTagName)
+por ID      (getElementById)
+por Nome    (getElementsByName)  
+por Classe  (getElementsByClassName)
+por Seletor (querySelector / querySelectorAll) usar a sintaxe do css 
+# para id . para class
+
+
+exemplo de navegação DOM
+
+// mudar a cor da pagina
+let cor = window.document.body
+cor.style.background='escolha a cor'

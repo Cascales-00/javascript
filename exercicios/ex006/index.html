@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div {
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- formas de chamar os eventos onmouseenter="entrou()" onmouseout="saiu()" onclick="clicou()" -->
+    <div id="area"> 
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.querySelector('div#area')
+        // Outra forma de chamar os eventos sem poluir o HTML addEventListener
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function entrou () {
+            a.innerHTML=('Entrou!')
+            a.style.background='red'
+        }
+
+        function saiu () {
+            a.innerText=('Saiu!')
+            a.style.background='green'
+        }
+
+        function clicou () {
+            a.innerText=('Clicou!')
+            a.style.background='blue'
+        }
+    </script>
+    
+</body>
+</html>

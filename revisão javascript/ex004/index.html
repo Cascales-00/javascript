@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004 Dados com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        section p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="inicio()">Clique para começar</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado...</p>
+    </section>
+    <script>
+        function inicio(){
+            let nome = window.prompt('Qual é o seu nome?')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596`
+        }
+    </script>
+</body>
+</html>
+
+<!--MAIS SOBRE VARIÁVEIS: Em JavaScript declaramos variáveis com
+as palavras let ou var. Basicamente, usando var nós podemos ter
+problemas com o escopo da variável (falaremos mais sobre isso na aula
+07, mas por enquanto vamos só com let mesmo).
+Outra coisa que podemos criar são variáveis imutáveis ou constantes. São
+variáveis que ficam na memória até o fim da execução do script, mas que
+não podem ter seu valor alterado de forma alguma. A declaração de uma
+constante é feita colocando a palavra const no lugar da palavra let. -->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1><!--DOM = Document Object Model-->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div><!-- testando seletores id, name e class -->
+    <script>
+        /* RECOMENDADO querySelector()*/
+        let d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+
+
+        let p1 = window.document.getElementsByTagName('p')[0]
+        /* 
+        [0] (na posição 0)foi para selecionar o primeiro paragrafo do arquivo, caso queira o segundo é só colocar [1] e assim sucessivamente 
+        */
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        /* Esse comando escreveu na página a frase acima e concatenou o coteudo do parágrafo na pocisão [0] (no caso o primeiro paragrafo) */
+
+        let corpo = window.document.body 
+        //  criou uma variavel e selecionou o corpo da pagina
+        corpo.style.background = 'black'
+        //mudou a cor da página para preto
+        p1.style.color = 'blue'
+        // usou a variavel p1 criada anteriormente para mudar a cor do texto  
+
+        
+        
+        /* seletor por ID 
+        let d = document.getElementById('msg')
+        d.style.background ='green'
+        d.innerText ='Estou aguardando...'
+        */
+
+        /* seletor por Name
+        let d = window.document.getElementsByName('msg')[0]
+        d.innetText = 'Olá'
+        */
+
+        /*
+        let d = window.document.getElementsByClassName('msg')[0]
+        d.innerText = 'Acessado por class name'
+        */
+    </script>
+    
+</body>
+</html>

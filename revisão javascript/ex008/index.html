@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex008 Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            padding: 20px;
+        }
+        section p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="analisar()">Clique para calcular</button>
+    <section id="mostrar">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+        function analisar(){
+            let n = Number.parseFloat(window.prompt('Digite um número: '))
+            let res = window.document.getElementById('mostrar')
+            let abs = Math.abs(n)
+            let inteira = Math.trunc(n)
+            let inteiroProximo = Math.ceil(n)
+            let raiz = Math.sqrt(n)
+            let cubica = Math.cbrt(n)
+            let exp2 = Math.pow(n,2)
+            let exp3 = Math.pow(n,3)
+            res.innerHTML = `O número a ser analisado aqui será <strong>2</strong>`
+            res.innerHTML += `<hr>`
+            res.innerHTML += `<p>O seu valor absoluto é ${abs}</p>`
+            res.innerHTML += `<p>A sua parte inteira é ${inteira}</p>`
+            res.innerHTML += `<p>O valor inteiro mais próximo é ${inteiroProximo}</p>`
+            res.innerHTML += `<p>A sua raiz quadrada é ${raiz}</p>`
+            res.innerHTML += `<p>A sua raiz cubica é ${cubica}</p>`
+            res.innerHTML += `<p>O valor de ${n}<sup>2</sup> é ${exp2}</p>`
+            res.innerHTML += `<p>O valor de ${n}<sup>3</sup> é ${exp3}</p>`
+        }
+    </script>
+</body>
+</html>

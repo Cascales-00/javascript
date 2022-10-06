@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+            @font-face {
+                font-family: Family Home;
+                src: url('Family Home.ttf');
+            }
+            body {
+                font-family: cursive, Helvetica, sans-serif;
+                font-size: 20px;
+                background-color: rgba(187, 77, 77, 0.795);
+            }
+            
+            div {
+                text-align: center;
+                margin: auto;
+                margin-top: 30px;
+                width: 500px;
+                background-color: aliceblue;
+                padding: 20px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                
+                margin-bottom: 0px;
+            }
+
+            div#res {
+                padding: 20px;
+                background-color: aliceblue;
+                margin-top: 0px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                
+            }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sistema de Multas</h1>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel">Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+    </div>
+    <div id="res">
+        
+    </div>
+    <script>
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number.parseFloat(txtv.value)
+            res.innerHTML =`<p>Sua velocidade atual é de <strong>${vel} Km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `Você está <strong>MULTADO</strong> por excesso de velocidade`
+            } else {
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>

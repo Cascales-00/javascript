@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009 Contador de Cliques</title>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()" id="clicar">Clique em mim</button>
+    <button onclick="zerar()">Zerar o contador</button>
+    <section id="resultado">
+
+    </section>
+    <script>
+        /*querySelector tem que colocar # para id e . para class
+        ex.     document.querySelector('section#resultado') se na section fosse uma class
+        seria   document.querySelector('.resultado')   */
+        let contador = 0
+        let res = document.querySelector('section#resultado')
+        // As variáveis declaradas aqui fora são consideradas GLOBAIS e funcionam dentro do programa inteiro
+        function contar() {
+            contador ++ // É a mesma coisa que contador = contador + 1
+            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>`
+        }
+        function zerar() {
+            contador = 0
+            res.innerHTML = null
+        }
+    </script>
+</body>
+</html>
+
