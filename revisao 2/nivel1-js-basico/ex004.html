@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="inicio()">Clique para começar</button>
+    <div id="resultado">
+        <p>Aqui vai aparecer o resultado...</p>
+    </div>
+
+    <script>
+        function inicio(){
+            let nome = window.prompt('Qual o seu nome?')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>Olá <strong>${nome}</strong>, é um prazer te conhecer!</p> `
+        }
+
+        /*function dado(){
+            let nome = window.prompt('Qual o seu nome?')
+            let res = window.document.querySelector('div#resultado')
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596` 
+        }*/
+    </script>
+</body>
+</html>
